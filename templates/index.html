@@ -7,7 +7,7 @@
 <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Real Estate Template</title>
+        <title>Wavegrid Studio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,20 +40,18 @@
 					<div class="row nav-menu">
 						<div class="col-md-3 col-sm-3 columns">
 							<a href="{% url 'home' %}">
-							<img class="logo logo-dark" alt="Logo" src="{% static 'img/logo-dark.png' %}">
+							<img class="logo logo-dark" alt="Logo" src="{% static 'img/wave.png' %}">
 						</div>
 					
 						<div class="col-md-9 col-sm-9 columns text-right">
 							<ul class="menu">
 								<a></a>
 								<li><a href="{% url 'home' %}" target="_self">Home</a></li>
-								<li><a href="about.html" target="_self">About us</a></li>
-								<li><a href="gallery.html" target="_self">Gallery</a></li>
-								<li><a href="contact.html" target="_self">Contact</a></li>
-								
-								
-								
-								
+								<li><a href="{% url 'about' %}" target="_self">About us</a></li>
+								<li><a href="gallery.html" target="_self">What we do</a></li>
+								<li><a href="{% url 'projects' %}" target="_self">Portfolio</a></li>
+								<li><a href="{% url 'contact' %}" target="_self">Contact us</a></li>
+									
 							</ul>
 		
 							
@@ -96,7 +94,7 @@
 					
 					<li class="overlay">
 						<div class="background-image-holder parallax-background">
-							<img class="background-image" alt="Background Image" src="img/image_slider1.jpg">
+							<img class="background-image" alt="Background Image" src="{% static 'img/image_slider1.jpg' %}">
 						</div>
 						
 						<div class="container align-vertical">
@@ -109,39 +107,114 @@
 							</div>
 						</div>
 					</li>
-					
-					<li class="overlay">
-						<div class="background-image-holder parallax-background">
-							<img class="background-image" alt="Background Image" src="img/image_slider2.jpg">
-						</div>
-						
-						<div class="container align-vertical">
-							<div class="row">
-								<div class="col-md-6 col-sm-9">
-									<h1 class="text-white">Voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae.</h1>
-									<a target="_blank" href="#" class="btn btn-primary btn-white">Learn more</a>
-									
-								</div>
-							</div>
-						</div>
-					</li>
-					
-					<li class="overlay">
-						<div class="background-image-holder parallax-background">
-							<img class="background-image" alt="Background Image" src="img/image_slider3.jpg">
-						</div>
-						
-						<div class="container align-vertical">
-							<div class="row">
-								<div class="col-md-6 col-sm-9">
-									<h1 class="text-white">Tempora incidunt ut labore dolore magnam aliquam voluptatem minima.</h1>
-									<a target="_blank" href="#" class="btn btn-primary btn-white">Learn more</a>
-									
-								</div>
-							</div>
-						</div>
-					</li>
+
 				</ul>
+			</section>
+			<section class="feature-selector">
+				
+				<div class="container">
+					<ul class="selector-content">
+						<li class="clearfix active">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h1> ABOUT WAVEGRIDSTUDIO</h1>
+								</div>
+							</div>
+							<li class="clearfix">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<p class="lead">
+											We are a team of experienced professionals within the construction industry. 
+											We do architectural design and visualization.  
+											We also do visualization (rendering) 
+											3D Architectural Renderings, 3D Architectural Animations (walkthroughs), 
+											and Virtual Reality Renderings for architects, interior designers, developers.
+										</p>
+									</div>
+								</div>
+							</li>
+						
+						<!-- <li class="clearfix">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h1>Numerous appealing ways to present information</h1>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-6">
+									<p class="lead">
+										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+									</p>	
+								</div>
+							
+								<div class="col-sm-6">
+									<p class="lead">
+										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+									</p>	
+								</div>
+							</div>
+						</li> -->
+						
+		
+					</ul>
+				</div>
+			</section>
+			<section class="no-pad-bottom no-pad-top projects-gallery">
+				
+				<div class="projects-wrapper clearfix">
+					
+					<div class="projects-container">
+						
+						<div class="col-md-4 col-sm-6 no-pad project print image-holder">
+							<div class="background-image-holder">
+								<img class="background-image" alt="Background Image" src="{% static 'img/interior_1.jpg' %}">
+							</div>
+							<div class="hover-state">
+								<div class="align-vertical">
+									<h3 class="text-white"><strong>Kitchen</strong> Design</h3>
+									<p class="text-white">
+										Excepteur sint occaecat cupidatat non <br>proident sunt in culpa.
+									</p>
+									<a href="#" class="btn btn-primary btn-white">See Project</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-6 no-pad project branding image-holder">
+							<div class="background-image-holder">
+								<img class="background-image" alt="Background Image" src="{% static 'img/interior_2.jpg' %}">
+							</div>
+							<div class="hover-state">
+								<div class="align-vertical">
+									<h3 class="text-white"><strong>Living Room</strong> Design</h3>
+									<p class="text-white">
+										Excepteur sint occaecat cupidatat non <br>proident sunt in culpa.
+									</p>
+									<a href="#" class="btn btn-primary btn-white">See Project</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-6 no-pad project print image-holder">
+							<div class="background-image-holder">
+								<img class="background-image" alt="Background Image" src="{% static 'img/interior_3.jpg' %}">
+							</div>
+							<div class="hover-state">
+								<div class="align-vertical">
+									<h3 class="text-white"><strong>Bathroom</strong> Design</h3>
+									<p class="text-white">
+										Excepteur sint occaecat cupidatat non <br>proident sunt in culpa.
+									</p>
+									<a href="#" class="btn btn-primary btn-white">See Project</a>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+					
+				</div>
+				
 			</section>
 			
 			<section class="feature-selector">
@@ -170,102 +243,8 @@
 						</ul>
 					</div>
 				</div>
-				
-				<div class="container">
-					<ul class="selector-content">
-						<li class="clearfix active">
-							<div class="row">
-								<div class="col-sm-12 text-center">
-									<h1> Neque porro quisquam dolorem ipsum quia dolor sit amet</h1>
-								</div>
-							</div>
-							
-							<div class="row">
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							</div>
-						</li>
-						
-						<li class="clearfix">
-							<div class="row">
-								<div class="col-sm-12 text-center">
-									<h1>Many appealing ways to present information</h1>
-								</div>
-							</div>
-							
-							<div class="row">
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							</div>
-						</li>
-						
-						<li class="clearfix">
-							<div class="row">
-								<div class="col-sm-12 text-center">
-									<h1>Several appealing ways to present information</h1>
-								</div>
-							</div>
-							
-							<div class="row">
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							</div>
-						</li>
-						
-						<li class="clearfix">
-							<div class="row">
-								<div class="col-sm-12 text-center">
-									<h1>Numerous appealing ways to present information</h1>
-								</div>
-							</div>
-							
-							<div class="row">
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							
-								<div class="col-sm-6">
-									<p class="lead">
-										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-									</p>	
-								</div>
-							</div>
-						</li>
-						
-		
-					</ul>
-				</div>
+
 			</section>
-			
 			<section class="no-pad-bottom no-pad-top projects-gallery">
 				
 				<div class="projects-wrapper clearfix">
@@ -274,7 +253,7 @@
 						
 						<div class="col-md-4 col-sm-6 no-pad project print image-holder">
 							<div class="background-image-holder">
-								<img class="background-image" alt="Background Image" src="img/interior_1.jpg">
+								<img class="background-image" alt="Background Image" src="{% static 'img/interior_1.jpg' %}">
 							</div>
 							<div class="hover-state">
 								<div class="align-vertical">
@@ -289,7 +268,7 @@
 						
 						<div class="col-md-4 col-sm-6 no-pad project branding image-holder">
 							<div class="background-image-holder">
-								<img class="background-image" alt="Background Image" src="img/interior_2.jpg">
+								<img class="background-image" alt="Background Image" src="{% static 'img/interior_2.jpg' %}">
 							</div>
 							<div class="hover-state">
 								<div class="align-vertical">
@@ -304,7 +283,21 @@
 						
 						<div class="col-md-4 col-sm-6 no-pad project print image-holder">
 							<div class="background-image-holder">
-								<img class="background-image" alt="Background Image" src="img/interior_3.jpg">
+								<img class="background-image" alt="Background Image" src="{% static 'img/interior_3.jpg' %}">
+							</div>
+							<div class="hover-state">
+								<div class="align-vertical">
+									<h3 class="text-white"><strong>Bathroom</strong> Design</h3>
+									<p class="text-white">
+										Excepteur sint occaecat cupidatat non <br>proident sunt in culpa.
+									</p>
+									<a href="#" class="btn btn-primary btn-white">See Project</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 no-pad project print image-holder">
+							<div class="background-image-holder">
+								<img class="background-image" alt="Background Image" src="{% static 'img/interior_3.jpg' %}">
 							</div>
 							<div class="hover-state">
 								<div class="align-vertical">
@@ -322,6 +315,8 @@
 				</div>
 				
 			</section>
+			
+
 		</div>
 		
 		<div class="footer-container">
@@ -332,9 +327,13 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4">
-							<img alt="logo" class="logo" src="img/logo-dark.png">
+							<img alt="logo" class="logo" src="{% static 'img/wave.png' %}">
 							<p>
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+								We are a team of experienced professionals within the construction industry. 
+								We do architectural design and visualization.  
+								We also do visualization (rendering) 
+								3D Architectural Renderings, 3D Architectural Animations (walkthroughs), 
+								and Virtual Reality Renderings for architects, interior designers, developers.
 							</p>
 						</div>
 						
