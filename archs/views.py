@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def home(request):
@@ -6,7 +7,11 @@ def home(request):
 
 
 def projects(request):
-    return render(request, 'gallery.html')
+    projects = Project.objects.all().order_by('-id')
+    context = {
+        'projects':projects
+    }
+    return render(request, 'gallery.html', context)
 
 def about(request):
     return render(request, 'about.html')
