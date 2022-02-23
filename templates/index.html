@@ -230,7 +230,14 @@
 						{% for project in projects  %}
 						<div class="col-md-4 col-sm-6 no-pad project print image-holder">
 							<div class="background-image-holder">
+								{% if project.video and project.image %}
+								<video autoplay muted loop 
+								style="max-width: 100%; height: 100%; object-fit: fill;">
+									<source src="{{project.video.url}}" type="video/mp4" class="background-image">
+								</video>
+								{% else %}
 								<img class="background-image" alt="Background Image" src="{{project.image.url}}">
+								{% endif %}
 							</div>
 							<div class="hover-state">
 								<div class="align-vertical">
