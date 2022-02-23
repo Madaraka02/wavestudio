@@ -103,7 +103,7 @@
 							<ul class="filters">VIsualization
 								<li data-filter="*" class="active"><span>All</span></li>
 								<li data-filter=".ExteriorRendering"><span>Exterior renders</span></li>
-								<li data-filter=".Fly-through"><span>Fly-throughs</span></li>
+								<li data-filter=".Flythrough"><span>Fly-throughs</span></li>
 								<li data-filter=".InteriorRendering"><span>Interior renders</span></li>
 								<li data-filter=".Animations"><span>Animations</span></li>
 								<li data-filter=".3Drendering"><span>3D PLANS</span></li>
@@ -115,9 +115,14 @@
 					<div class="container">
 						<div class="projects-container column-projects">
 							{% for project in projects %}
+							
 							<div class="col-md-4 col-sm-6 project {{project.Category.name}} image-holder">
 								<div class="background-image-holder">
+									{% if project.Category.name == Flythrough %}
+									<h2>yoooo</h2>
+									{% else %}
 									<img class="background-image" alt="Background Image" src="{{project.image.url}}">
+									{% endif %}
 								</div>
 								<div class="hover-state">
 									<div class="align-vertical">
