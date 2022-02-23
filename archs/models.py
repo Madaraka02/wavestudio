@@ -18,6 +18,7 @@ class Category(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
+    Category =  models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     image = models.FileField(upload_to='projimages', null=True)
     video = models.FileField(upload_to='projvideos', null=True, blank=True)
     description = models.TextField(null=True, blank=True)
