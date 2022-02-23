@@ -3,7 +3,11 @@ from .models import *
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    projects = Project.objects.all().order_by('-id')[:18]
+    context = {
+        'projects':projects
+    }
+    return render(request, 'index.html', context)
 
 
 def projects(request):
