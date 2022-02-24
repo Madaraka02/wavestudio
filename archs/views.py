@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.shortcuts import get_object_or_404
 from .models import *
 from .forms import *
@@ -28,6 +28,8 @@ def contact(request):
         form = ContactForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            return redirect('contact')
+        return redirect('home')      
     context ={
         "form": form
     }
