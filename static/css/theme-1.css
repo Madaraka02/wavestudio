@@ -2863,11 +2863,12 @@ footer.short-2 .contact-action:hover {
     display: block;
   }
   .top-bar .menu li a {
+    font-size: medium;
     color: #777777;
     padding-bottom: 0px;
   }
   .overlay-bar .menu li a:hover {
-    color: #333333;
+    color: #0982e6;
   }
   .overlay-bar .has-dropdown:after {
     color: #333333;
@@ -2882,7 +2883,10 @@ footer.short-2 .contact-action:hover {
     float: none;
     margin-bottom: 16px;
     margin-right: 0px;
+    color: white;
+    font-size: medium;
   }
+ 
   .subnav {
     position: relative;
     background: none;
