@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -96,40 +97,20 @@
 					</div>
 					
 					<div class="row">
-						<div class="col-sm-4">
-							<h5>Enquiries</h5>
-							<p>
-								Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus. 
-							</p>
-							
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</p>
-						</div>
 						
-						<div class="col-sm-4 text-center">
-							<h5>Details</h5>
-							<p class="lead">Kiewit Building 
-		<br>200 Avenue Street ,&nbsp;Chicago<br><br>+70 424 495 952 
-		<br>contact@realestate.com<br></p>
-						</div>
 						
-						<div class="col-sm-4">
+						<div class="col">
 							<h5>Leave A Message</h5>
 							<div class="form-wrapper clearfix">
-								<form class="form-contact email-form">
-									<div class="inputs-wrapper">
-										<input class="form-name validate-required" type="text" placeholder="Your Name" name="name">
-										<input class="form-email validate-required validate-email" type="text" placeholder="Your Email Address" name="email">
-										<textarea class="form-message validate-required" name="message" placeholder="Your Message"></textarea>
-									</div>
-									<input type="submit" class="send-form" value="Send Form">
-									<div class="form-success">
-										<span class="text-white">Message sent - Thanks for your enquiry</span>
-									</div>
-									<div class="form-error">
-										<span class="text-white">Please complete all fields correctly</span>
-									</div>
+								<form  method="post" enctype="multipart/form-data" class="form-contact email-form">
+									{% csrf_token %}
+									<div class="inputs-wrapper form-group">
+										
+										{{ form|crispy }}
+										</div>
+										<div class="form-actions">
+											<input type="submit" class="send-form" value="Send Message">
+											</div>
 								</form>
 							</div>
 						</div>

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from .models import *
+from .forms import *
 
 # Create your views here.
 def home(request):
@@ -22,7 +23,16 @@ def about(request):
     return render(request, 'about.html')
 
 def contact(request):
-    return render(request, 'contact.html')    
+    form = ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    context ={
+        "form": form
+    }
+
+    return render(request, 'contact.html', context)    
 
 
 def projectDeails(request, id):    

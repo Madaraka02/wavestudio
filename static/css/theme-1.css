@@ -2202,6 +2202,8 @@ blockquote {
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   margin-bottom: 24px;
+  padding: 10px;
+  margin-left: 5px !important;
 }
 .form-contact input:focus,
 .form-contact textarea:focus {
