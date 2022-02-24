@@ -26,8 +26,8 @@ def contact(request):
 
 
 def projectDeails(request, id):    
-    projects = get_object_or_404(Project, id=id)
+    project = get_object_or_404(Project, id=id)
     context = {
-        'projects':projects
+        'project':project
     }
     return render(request, 'project-details.html', context)    
