@@ -42,7 +42,7 @@ def feedback(request):
         form = FeedbackForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('contact')
+            return redirect('home')
         return redirect('home')      
     context ={
         "form": form
