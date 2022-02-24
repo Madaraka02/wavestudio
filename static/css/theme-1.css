@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .bg-primary {
   background-color: #424651 !important;
 }
@@ -88,6 +91,28 @@ body {
   color: #777777;
   font-size: 14px;
   line-height: 24px;
+}
+.mtt{
+  margin-top: 30px !important;
+  margin-bottom: 10px !important;
+  color: #161616;
+  font-size: larger;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.mtt:hover{
+  color: #05ebdf;
+}
+.gall{
+  font-size: medium !important;
+}
+.gall:hover{
+  color: #05ebdf;
+}
+.ddr{
+  width: 100% !important; 
+  height: 100% !important; 
+  object-fit: fill !important;
 }
 h1,
 h2,
@@ -419,9 +444,15 @@ nav hr {
 .navv{
   background: black;
 }
+.ftt{
+  color: #ffffff !important;
+}
+.ft:hover{
+  color: #05ebdf !important;
+}
 .top-bar {
   position: absolute;
-  background-color: #ffffff !important;
+  background-color: #070707 !important;
   width: 100%;
   z-index: 10;
   -webkit-transition: all .5s ease;
@@ -504,10 +535,10 @@ nav hr {
 .menu li a {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 11px;
+  font-size: medium;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #777777;
+  color: #ffffff;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   transition: all .5s ease;
@@ -515,8 +546,8 @@ nav hr {
   display: inline-block;
   line-height: 14px;
 }
-.menu li a:hover {
-  color: #333333;
+.menu li :hover {
+  color: #05ebdf;
 }
 @media all and (max-width: 1050px) {
   .menu li {
@@ -2723,7 +2754,8 @@ footer.social .sub a {
   font-weight: 600;
 }
 footer.details {
-  background: #f4f4f4;
+  margin-top: 10px !important;
+  background: #0e0d0d;
 }
 footer.details .logo {
   margin-bottom: 54px;
