@@ -22,3 +22,11 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')    
+
+
+def projectDeails(request, id):    
+    projects = Project.get_object_or_404(id=id)
+    context = {
+        'projects':projects
+    }
+    return render(request, 'project-details.html', context)    

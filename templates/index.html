@@ -101,7 +101,7 @@
 							<div class="row">
 								<div class="col-md-6 col-sm-9">
 									<h1 class="text-white">Lorem ipsum dolor sit amet consectquis nostrud exercitation ullamco laboris nisi ut aliquip.</h1>
-									<a target="_blank" href="#" class="btn btn-primary btn-white">LEARN MORE</a>
+									<a target="_blank" href="" class="btn btn-primary btn-white">LEARN MORE</a>
 									
 								</div>
 							</div>
@@ -142,6 +142,13 @@
 			<section id="what" class="no-pad-bottom no-pad-top projects-gallery">
 				
 				<div class="projects-wrapper clearfix">
+					<ul class="selector-content">
+						<li class="clearfix active mt-4">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h1> WHAT WE DO</h1>
+								</div>
+							</div></li></ul>
 					
 					<div class="projects-container">
 						
@@ -225,6 +232,13 @@
 			<section class="no-pad-bottom no-pad-top projects-gallery">
 				
 				<div class="projects-wrapper clearfix">
+					<ul class="selector-content">
+						<li class="clearfix active">
+							<div class="row mt-4">
+								<div class="col-sm-12 text-center">
+									<h1> OUR LATEST PROJECTS</h1>
+								</div>
+							</div></li></ul>
 					
 					<div class="projects-container">
 						{% for project in projects  %}
@@ -245,7 +259,7 @@
 									<p class="text-white">
 										Excepteur sint occaecat cupidatat non <br>proident sunt in culpa.
 									</p>
-									<a href="#" class="btn btn-primary btn-white">See Project</a>
+									<a href="{% url 'project' project.id %}" class="btn btn-primary btn-white">See Project</a>
 								</div>
 							</div>
 						</div>
