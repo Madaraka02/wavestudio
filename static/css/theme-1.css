@@ -411,7 +411,7 @@ nav hr {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   content: "\33";
-  color: #777777;
+  color: #dbd8d8;
 }
 .mobile-toggle {
   display: none;
@@ -421,7 +421,7 @@ nav hr {
 }
 .top-bar {
   position: absolute;
-  background-color: black !important;
+  background-color: #ffffff !important;
   width: 100%;
   z-index: 10;
   -webkit-transition: all .5s ease;
