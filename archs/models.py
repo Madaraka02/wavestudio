@@ -21,7 +21,6 @@ class Project(models.Model):
     Category =  models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     image = models.FileField(upload_to='projimages', null=True)
     video = models.FileField(upload_to='projvideos', null=True, blank=True)
-    description = models.TextField(null=True, blank=True)
     completed = models.BooleanField(default=True)
 
 

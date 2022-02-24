@@ -114,7 +114,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
-							<h1 class="mtt">{{project.title}} PROJECT GALLERY</h1>
+							{% if project.completed == True %}
+							<h1 class="mtt">Completed {{project.title}} PROJECT GALLERY</h1>
+							{% else %}
+							<h1 class="mtt">Ongoing {{project.title}} PROJECT GALLERY</h1>
+							{% endif %}
 						</div>
 					</div>
 					
