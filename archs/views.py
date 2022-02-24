@@ -26,7 +26,7 @@ def contact(request):
 
 
 def projectDeails(request, id):    
-    projects = Project.get_object_or_404(id=id)
+    projects = get_object_or_404(Project, id=id)
     context = {
         'projects':projects
     }
