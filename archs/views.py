@@ -36,6 +36,20 @@ def contact(request):
 
     return render(request, 'contact.html', context)    
 
+def feedback(request):
+    form = FeedbackForm()
+    if request.method == "POST":
+        form = FeedbackForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('contact')
+        return redirect('home')      
+    context ={
+        "form": form
+    }
+
+    return render(request, 'feedback.html', context)
+
 
 def projectDeails(request, id):    
     project = get_object_or_404(Project, id=id)

@@ -7,4 +7,5 @@ urlpatterns = [
     path('projects/', projects, name="projects"),
     path('projects/<int:id>/', projectDeails, name="project"),
     path('contact-us/', contact, name="contact"),
+    path('feedback/', feedback, name="feedback"),
 ]

@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -7,7 +8,7 @@
 <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Wavegrid Studio| Portfolio</title>
+        <title>Wavegrid Studio| Feedback</title>
 		<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,8 +48,7 @@
 							<ul class="menu">
 								<a></a>
 								<li><a href="{% url 'home' %}" target="_self">Home</a></li>
-                                <li><a href="{% url 'projects' %}" target="_self">Portfolio</a></li>
-								<li><a href="{% url 'contact' %}" target="_self">Contact us</a></li>
+								<li><a href="{% url 'projects' %}" target="_self">Portfolio</a></li>
 									
 							</ul>
 		
@@ -84,115 +84,59 @@
 		</div>
 		
 		<div class="main-container">
-		<section class="no-pad-bottom projects-gallery">
+
+			
+			<section class="contact-thirds">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
-							<h1>Check out some of our<br>latest and greatest projects</h1>
-							<p class="lead">
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta. 
-							</p>
-						</div>
+							<div class="col-sm-12 text-center">
+								<h1>Send us a Feedback<br>
+								Tell people about the work we did for you
+								</h1>
+							</div>
 					</div>
 					
-				</div>
-				
-				<div class="projects-wrapper clearfix">
-					<div class="container">
-						<div class="row">
-							<ul class="filters">
-								<li data-filter="*" class="active"><span>All</span></li>
-								<li data-filter=".branding"><span>Exterior renders</span></li>
-								<li data-filter=".development"><span>Fly-throughs</span></li>
-								<li data-filter=".print"><span>Interior renders</span></li>
-								<li data-filter=".anime"><span>Animations</span></li>
-								<li data-filter=".3d"><span>3D PLANS</span></li>
-							</ul>
-						</div>
-					</div>
-					
-					<div class="container">
-						<div class="projects-container column-projects">
-					
-							<div class="col-md-4 col-sm-6 project anime image-holder">
-								<div class="background-image-holder">
-									<img class="background-image" alt="Background Image" src="{% static 'img/project1.jpg' %}">
-								</div>
-								<div class="hover-state">
-									<div class="align-vertical">
-										<h3 class="text-white"><strong>Lorem</strong> Ipsum</h3>
-										<a href="#" class="btn btn-primary btn-white">See Project</a>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-md-4 col-sm-6 project branding image-holder">
-								<div class="background-image-holder">
-									<img class="background-image" alt="Background Image" src="{% static 'img/project2.jpg' %}">
-								</div>
-								<div class="hover-state">
-									<div class="align-vertical">
-										<h3 class="text-white"><strong>Lorem</strong> Ipsum</h3>
-										<a href="#" class="btn btn-primary btn-white">See Project</a>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-md-4 col-sm-6 project print image-holder">
-								<div class="background-image-holder">
-									<img class="background-image" alt="Background Image" src="{% static 'img/project3.jpg' %}">
-								</div>
-								<div class="hover-state">
-									<div class="align-vertical">
-										<h3 class="text-white"><strong>Lorem</strong> Ipsum</h3>
-										<a href="#" class="btn btn-primary btn-white">See Project</a>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-md-4 col-sm-6 project print image-holder">
-								<div class="background-image-holder">
-									<img class="background-image" alt="Background Image" src="{% static 'img/project4.jpg' %}">
-								</div>
-								<div class="hover-state">
-									<div class="align-vertical">
-										<h3 class="text-white"><strong>Lorem</strong> Ipsum</h3>
-										<a href="#" class="btn btn-primary btn-white">See Project</a>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-md-4 col-sm-6 project branding image-holder">
-								<div class="background-image-holder">
-									<img class="background-image" alt="Background Image" src="{% static 'img/project5.jpg' %}">
-								</div>
-								<div class="hover-state">
-									<div class="align-vertical">
-										<h3 class="text-white"><strong>Lorem</strong> Ipsum</h3>
-										<a href="#" class="btn btn-primary btn-white">See Project</a>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-md-4 col-sm-6 project development image-holder">
-								<div class="background-image-holder">
-									<img class="background-image" alt="Background Image" src="{% static 'img/project6.jpg' %}">
-								</div>
-								<div class="hover-state">
-									<div class="align-vertical">
-										<h3 class="text-white"><strong>Lorem</strong> Ipsum</h3>
-										<a href="#" class="btn btn-primary btn-white">See Project</a>
-									</div>
-								</div>
-							</div>
-							
+					<div class="row">
 						
-					
+						
+						<div class="col">
+							<div class="form-wrapper clearfix">
+								<form action="" method="post" enctype="multipart/form-data">
+									{% csrf_token %}
+									<div class="inputs-wrapper">
+										{{ form|crispy }}
+									</div>
+									<input type="submit" class="form-control submit-btn" value="Send Message">
+										
+									
+								  <!-- <div class="col-lg-6 col-12">
+									<input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+								  </div>
+								  <div class="col-lg-6 col-12">
+									<input type="email" class="form-control" name="email" placeholder="Email" id="email">
+								  </div>
+								  <div class="col-12">
+									<textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+								  </div> -->
+				
+								  <!-- <div class="ml-lg-auto col-lg-5 col-12">
+									<input type="submit" class="form-control submit-btn" value="Send Message">
+								  </div> -->
+							  </form>
+								<!-- <form  method="post" enctype="multipart/form-data" class="form-contact email-form">
+									
+									<div class="inputs-wrapper form-group">
+										
+										
+										</div>
+										<div class="form-actions">
+											<input type="submit" class="send-form" value="Send Message">
+											</div>
+								</form> -->
+							</div>
 						</div>
 					</div>
-					
 				</div>
-				
 			</section>
 		</div>
 		
