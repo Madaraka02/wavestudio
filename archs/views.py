@@ -6,8 +6,10 @@ from .forms import *
 # Create your views here.
 def home(request):
     projects = Project.objects.all().order_by('-id')[:18]
+    feedbacks = Feedback.objects.all().order_by('-id')[:6]
     context = {
-        'projects':projects
+        'projects':projects,
+        'feedbacks':feedbacks
     }
     return render(request, 'index.html', context)
 
