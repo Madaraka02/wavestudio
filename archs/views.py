@@ -7,9 +7,11 @@ from .forms import *
 def home(request):
     projects = Project.objects.all().order_by('-id')[:18]
     feedbacks = Feedback.objects.all().order_by('-id')[:6]
+    partners = Partners.objects.all().order_by('-id')
     context = {
         'projects':projects,
-        'feedbacks':feedbacks
+        'feedbacks':feedbacks,
+        'partners':partners
     }
     return render(request, 'index.html', context)
 
