@@ -52,6 +52,10 @@
 								<li><a href="#teamm" target="_self">Testimonies</a></li>
 								<li><a href="{% url 'projects' %}" target="_self">Portfolio</a></li>
 								<li><a href="{% url 'contact' %}" target="_self">Contact us</a></li>
+								{% if request.user.is_authenticated and request.user.is_staff%}
+								<li><a href="{% url 'admin' %}" target="_self">Admin</a></li>
+								<li><a target="_self" href="{% url 'account_logout' %}">Logout</a></li>
+							  {% endif %}
 									
 							</ul>
 		
