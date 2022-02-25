@@ -534,7 +534,7 @@ nav hr {
 }
 .menu li a {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: medium;
   text-transform: uppercase;
   letter-spacing: 1px;

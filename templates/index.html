@@ -46,15 +46,21 @@
 						<div class="col-md-9 col-sm-9 columns text-right">
 							<ul class="menu">
 								<a></a>
+								{% if request.user.is_authenticated and request.user.is_staff%}
+								<li><a href="{% url 'home' %}" target="_self">Home</a></li>
+
+								<li><a href="{% url 'projects' %}" target="_self">Portfolio</a></li>
+								<li><a href="{% url 'contact' %}" target="_self">Contact us</a></li>
+								
+								<li><a href="{% url 'admin' %}" target="_self">Admin</a></li>
+								<li><a target="_self" href="{% url 'account_logout' %}">Logout</a></li>
+								{% else %}
 								<li><a href="{% url 'home' %}" target="_self">Home</a></li>
 								<li><a href="#about" target="_self">About us</a></li>
 								<li><a href="#services" target="_self">What we do</a></li>
 								<li><a href="#teamm" target="_self">Testimonies</a></li>
 								<li><a href="{% url 'projects' %}" target="_self">Portfolio</a></li>
 								<li><a href="{% url 'contact' %}" target="_self">Contact us</a></li>
-								{% if request.user.is_authenticated and request.user.is_staff%}
-								<li><a href="{% url 'admin' %}" target="_self">Admin</a></li>
-								<li><a target="_self" href="{% url 'account_logout' %}">Logout</a></li>
 							  {% endif %}
 									
 							</ul>
